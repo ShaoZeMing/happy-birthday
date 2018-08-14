@@ -1,3 +1,11 @@
+.elm {
+	/*Firefox*/
+-moz-calc(expression);
+	/*chrome safari*/
+-webkit-calc(expression);
+	/*Standard */
+calc();
+}
 body {
 	/*background-color: #FFDAB9;	*/
 	background-color: #000;
@@ -7,6 +15,8 @@ body {
 	-ms-transition:background-color linear 5s;
 	transition:background-color linear 5s;
 	overflow-x:hidden;
+	width: 100vw;
+
 }
 .container {
 	display: none;
@@ -1077,18 +1087,20 @@ audio {
 
 .balloons {
 	position: fixed;
-	bottom: -200px;
+	bottom: calc(-100vw / 2);
 	opacity: 0.6;
 	z-index: 99;
-	width: 100px;
-	height: 183px;
+	/*width: 100px;*/
+	width: calc(100vw / 9);
+	/*height: 183px;*/
+	height:calc(100vw / 5);
 	background-repeat: no-repeat no-repeat;
-	background-size: 100px 183px;
+	background-size: calc(100vw / 9) calc(100vw / 5);
 }
 .balloons h2 {
 	text-transform: uppercase;
 	font-family: 'Signika', sans-serif;
-	font-size: 50px;
+	font-size: calc(100vw / 15);
 	color: #BF4136;
 	text-shadow: 5px 5px 5px #FFF;
 	display: none;
@@ -1260,7 +1272,7 @@ audio {
 	bottom: 0;
 	padding:10px 0px 10px 0px;
 }
-#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
+#play, #play2, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#form_submit,#wish_message,#story {
 	display: none;
 }
 
@@ -1273,7 +1285,7 @@ audio {
 }
 .message p {
 	font-family: 'Signika', sans-serif;
-	font-size: 30px;
+	font-size: calc(100vw / 18);
 	text-transform: uppercase;
 	color: #C4515C;
 	text-shadow: 2px 2px 2px #FFF;
@@ -1303,7 +1315,7 @@ audio {
 
 
     /*controlling tablet width*/
-    /*@media only screen and (max-width: 720px){
+ /*   @media only screen and (max-width: 720px){
     	.container {
     		-webkit-transform: scale(0.9);
     	}
