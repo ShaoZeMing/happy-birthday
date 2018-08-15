@@ -1104,6 +1104,8 @@ audio {
 	color: #BF4136;
 	text-shadow: 5px 5px 5px #FFF;
 	display: none;
+	position: absolute;
+	top:calc(100vw / 30) ;
 }
 #b1,#b11 {
 	background-image: url('b1.png');
